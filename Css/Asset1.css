@@ -1,0 +1,1341 @@
+/* top bar */
+.topbar {
+    background: #212026;
+    height: 36px;
+}
+
+.topbar_d{
+    padding-top: 5px;
+}
+
+.distopbar-lexf {
+    display: flex;
+}
+
+.topbarleft {
+    color: #fff;
+    display: flex;
+    font-size: 13px;
+}
+
+.topbarleft a {
+    color: #fff;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    counter-increment: itemcounter;
+    position: relative;
+}
+
+.aff-left {
+    border-left: 2px solid white;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.topbarleft {
+    left: 40px;
+
+}
+
+.topbarright {
+    display: flex;
+    justify-content: right;
+    padding: 0;
+    right: 40px;
+
+}
+
+.topbarright a {
+    color: #fff;
+    font-size: 13px;
+}
+
+.font2 {
+    border-left: 2px solid #fff;
+    padding-left: 15px;
+}
+
+.font1 {
+    margin-right: 10px;
+}
+
+/* End Topbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.title {
+    position: relative;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f3f3f3;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .title:hover::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+        color: #fff;
+    }
+}
+
+
+/* header */
+header{
+  background: #fff;
+}
+header.fixed{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7000;
+    box-shadow: 0 0 5px 2px #ccc;
+}
+.logo {
+    background-size: cover;
+    width: 50px;
+    margin-left: 40px;
+}
+
+.menuheader{
+    display: flex;
+    font-size: 15px;
+    padding-top: 27px;
+    text-align: center;
+}
+
+/* relation */
+
+#main-menu {
+    display: flex;
+}
+
+nav #main-menu li a {
+    color: rgb(18, 17, 17);
+    text-decoration: none;
+    display: block;
+}
+
+nav #main-menu li:hover a {
+    background: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+
+#toggle {
+    display: none;
+    background: rgb(255, 255, 255);
+    color: rgb(30, 29, 29);
+    text-align: right;
+    padding: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 820px) {
+    #main-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #toggle {
+        display: block;
+        margin-top: -84px;
+        background: #000000;
+        color: #fff;
+    }
+
+    .menuheader nav {
+        display: none;
+    }
+
+    #main-menu li:hover>ul.sub-menu {
+        position: absolute;
+        display: block;
+        right: -160px;
+        top: -30px;
+        z-index: initial;
+    }
+
+    .logo {
+        padding-top: 10px;
+        background: #000000;
+    }
+
+    .topbar {
+        display: none;
+    }
+
+    .header-search-box {
+        display: none;
+    }
+
+}
+
+@media all and (min-width: 600px){
+    .search_textBox_mobile{
+        top: 10px;
+       
+    }
+
+    .btn-search-mobile {
+        display: block;
+    }
+ 
+    .header-action{
+        display: block;
+    }   
+}
+#main-menu li {
+    position: relative;
+}
+
+#main-menu ul.sub-menu {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    list-style: none;
+    width: 200px;
+    border-bottom: 1px solid #202020;
+    display: none;
+
+}
+
+#main-menu li:hover>ul.sub-menu {
+    display: block;
+    
+}
+
+
+#main-menu ul.sub-menu a {
+    padding: 8px 15px;
+    border-bottom: 1px solid #c9c8c8;
+    left: 0;
+}
+
+#main-menu ul.sub-menu li:hover a {
+    border-bottom: 1px solid #202020;
+    transition: all 0.3s ease;
+}
+
+#main-menu ul.sub-menu li:last-child a {
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#main-menu ul.sub-menu ul.sub-menu {
+    left: 200px;
+    top: -15px;
+    transition: all 0.3s ease;
+
+}
+
+/* Thiết lập border kho cover */
+#main-menu>li>a {
+    position: relative;
+}
+
+#main-menu>li>a::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    background: #202020;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu>li:hover>a::before {
+    width: 100%;
+}
+
+#main-menu>li.has-child::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    color: #202020;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-right: 10px;
+    left: 120px;
+
+}
+
+#main-menu .sub-menu li:hover>a {
+    color: #a641ff;
+}
+
+#main-menu .sub-menu>li.has-child::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    color: #202020;
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    padding: 8px 0px;
+
+}
+
+#main-menu .sub-menu>li.has-child:hover:after {
+    color: #a641ff;
+    transition: all 0.3s ease;
+}
+
+#main-menu li {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    
+}
+
+.header-action {
+    display: flex;
+}
+
+.btn-search-box {
+    background: #efefef;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 40%;
+    height: 35px;
+    padding: 0;
+    top: 20px;
+    left: -15px;
+    transition: opacity 150ms linear;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+
+}
+
+.btn-search-box:hover{
+        border: none;
+        background: #212026;
+        transition: 2s;
+        fill: #fff;
+}
+
+.header-action{
+    padding: 0;
+}
+
+.search-textBo input.search-input {
+    width: 100%;
+    font-size: 13px;
+    height: 35px;
+    background: #efefef;
+    border-color: #efefef;
+    border-block-start: inherit;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.search-textBo input.search-input:hover {
+    background: #efefef;
+    transition: 1s ease-in-out;
+}
+
+
+form.searchFrom {
+    padding-top: 20px;
+    display: flex;
+}
+
+.search_mobile{
+  padding: 10px;
+  display: flex;
+}
+
+.search_textBox_mobile{
+     width: 80%;
+}
+
+input.input-search {
+    width: 100%;
+    padding-right: 10px;
+    margin: 0;
+    border-radius: 7px;
+    border: none;
+    background: #efefef;
+    color: #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    padding: 10px;
+}
+
+button.btn-searchh-mobile {
+    border-block: inherit;
+    padding: 10px;
+    width: 20%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: #000 !important;
+}
+
+button.btn-search-mobile i {
+    color: #fff !important;
+    left: -10px;
+    font-size: 20px;
+}
+
+
+.btn-search-mobile .btn_mobile {
+    display: none;
+    top: 27px;
+}
+
+/* User Login */
+
+.header-account{
+    
+    padding-top: 27px;
+    
+}
+
+.header-account i{
+    font-size: 25px;
+    color: #000;
+    padding-right: 70px;
+}
+
+/* cart Shopping */
+  *.icon-grey {
+    color: grey;
+  }
+  
+  i {
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    
+  }
+  .header-cart{
+    font-size: 25px;
+  }
+  
+  .header-cart button{
+    margin-top: 17px;
+    width: 47px;
+    border: none;
+  }
+
+  .header-cart button i{
+    right: 46px;
+    left: -21px;
+    top: 10px;
+  }
+  .header-cart button:active{
+      outline: none;
+      border: none;
+  }
+  button:focus {outline:0 !important;}
+
+  .notification {
+    
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+
+  }
+  
+  .notification:hover {
+
+  }
+  .notification i{
+    padding: 0;
+    margin: 0;
+    left: -34px;
+    top: 25px;
+  }
+  
+.notification span.badges::after {
+    content: attr(data-count);
+    position: absolute;
+    top: 17px;
+    right: 16px;
+    font-size: 8px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    padding-right: 10px;
+    margin-right: 42px;
+    height: 23px;
+    width: 24px;
+  }
+  .header-action{
+    position: relative;
+  }
+
+  .showslide_header{
+    position: relative;
+    z-index: inherit;
+  }
+
+  .content_showslide{
+     padding-top: 15px;
+  }
+
+  .menuheader{
+    z-index: 1;
+  }
+
+  .slideshow-container {
+    position: relative;
+    font-size: 20px;
+    
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none !important;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: 300;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+  }
+  
+  .content_showslide {
+        height: 64px;
+  }
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+
+  .mySlides_content{
+    text-align: center;
+    justify-content: center;
+  }
+
+  
+  /* Fading animation */
+.fade1 {
+    animation-name: fade1;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade1 {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  
+/* Img hover Banner */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+figure.snip0016 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+  left: 48px;
+}
+figure.snip0016 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0016 img {
+  max-width: 100%;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0016 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 3em;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0016 figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 100%;
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0016 h2,
+figure.snip0016 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.snip0016 h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(30%, 0%, 0);
+  transform: translate3d(30%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0016 h2 span {
+  font-weight: 800;
+}
+figure.snip0016 p {
+  font-weight: 200;
+  -webkit-transform: translate3d(0%, 30%, 0);
+  transform: translate3d(0%, 30%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0016 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0016:hover img {
+  opacity: 0.3;
+}
+figure.snip0016:hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+figure.snip0016:hover figcaption p {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0016:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* Demo purposes only */
+div.banner_img_animation{
+    display: flex;
+    top: 122PX;
+   
+}
+.banner_img_animation{
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+figure .snip0016 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-sizing: border-box;
+}
+
+@media screen and (max-width: 820px){
+    .showslide_header{
+        display: none;
+    }
+    div.showslide_header_mobile{
+        display: block;
+    }
+    .action-nomal{
+      display: none;
+    }
+    div.action_mobile{
+      display: block;
+      top: 2%;
+      right: 20%;
+     
+    }
+
+    div.btn-search-mobile .btn_mobile{
+          display: block;
+    }
+
+
+}
+
+
+.showslide_header_mobile{
+    display: none;
+}
+
+.action_mobile{
+    display: none;
+}
+
+.header-cart{
+  right: -65px;
+  top: -4px;
+}
+.header-account{
+  padding: 0;
+  top: 31%;
+}
+.header-cart i{
+  border-left: 1px solid #000;
+}
+
+div.action_mobile .header-account{
+  position: absolute;
+  top: 6%;
+  left: 15%;
+}
+div.action_mobile .header-account i {
+  left: 81%;
+  font-size: 35px;
+  padding: 0;
+  border-right: 1px solid rgb(255, 255, 255);
+  color: #fff;
+}
+div.action_mobile .header-cart{
+  position: absolute;
+  right: 12%;
+    top: 2%;
+}
+div.action_mobile .header-cart i{
+  font-size: 32px;
+  color: #fff;
+}
+
+#wrapper{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+div.SanPhamMoi_list h3{
+    font-size: 18px;
+    color: #111;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    display: inline-block;
+    font-weight: 600;
+}
+
+div.SanPhamMoi_list{
+  text-align: center;
+  margin: 40px 0px;
+}
+ul.productss{
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+}
+ul.productss li{
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+}
+
+ul.productss li img{
+    width: 100%;
+    height: 158px;
+}
+
+ul.productss li .product-top {
+      position: relative;
+      overflow: hidden;
+}
+
+ul.productss li .product-top .product-thumd{
+      display: block;
+}
+ul.productss li:hover .product-top .product-thumd img{
+      filter: opacity(80%);
+}
+
+ul.productss li .product-top .product-thumd img{
+      display: block;
+}
+
+ul.productss li .product-top button.buy-now{
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  background-color: #446084;
+  color: #fff;
+  padding: 10px 0px;
+  position: absolute;
+  bottom: -36px;
+  width: 100%;
+  transition: 0.25s ease-in-out;
+  opacity: 0.85;
+}
+ul.productss li:hover button.buy-now{
+  bottom: 0px;
+}
+
+ul.productss li .products-info{
+  padding: 10px 0px;
+}
+ul.productss li .products-info a{
+    display: block;
+    text-decoration: none;
+}
+
+ul.productss li .products-info a.product-cat{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #9e9e9e;
+    padding: 3px 0px;
+}
+ul.productss li .products-info a.product-name{
+    color: #334862;
+    padding: 3px 0px;
+}
+ul.productss li .products-info .product-price{
+    color: #111;
+    padding: 3px 0px;
+    font-weight: 600;
+}
+
+.showSilde_sanPhamMoi{
+  display: flex !important;
+}
+
+div.TieuDe_SPGG{
+  text-align: center;
+  margin: 40px 0px;
+}
+.TieuDe_SPGG h3{
+  font-size: 18px;
+  color: #111;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: 1px solid #bebebe;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.list_SanPham{
+  background: #f5f5f5;
+  height: 283px;
+}
+
+.TieuDe_ListSanPham{
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.TieuDe_ListSanPham h4{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.diachi{
+   display: flex;
+}
+.diachi span{
+  font-weight: 700;
+  color: #000000;
+}
+.dienthoai{
+  display: flex;
+}
+.dienthoai span{
+  font-weight: 700;
+  color: #000000;
+}
+.Email{
+  display: flex;
+}
+.Email span{
+  font-weight: 700;
+  color: #000000;
+}
+.giolamviec{
+  display: flex;
+}
+.giolamviec span{
+  font-weight: 700;
+  color: #000000;
+}
+
+.tintuc{
+  text-align: center;
+}
+.Content_listSanPham{
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+div.Gioithieu{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+
+div.Gioithieu span a{
+    line-height: 2;
+    color: #000;
+    text-decoration: none;
+}
+div.Gioithieu span a:hover{
+    color: rgb(254, 130, 13);
+    transition: 0.3 all ease;
+}
+
+div.tintuc span a{
+  color: #000;
+  text-decoration: none;
+  line-height: 2;
+}
+
+div.tintuc span a:hover{
+  color: rgb(254, 130, 13);
+  transition: 0.3 all ease;
+}
+div.content_Thongtin{
+    width: 100%;
+    line-height: 3;
+}
+.footer{
+      width: 100%;
+    background: #000;
+    height: 80px;
+}
+
+.sub-menu_list{
+    padding-left: 20px;
+}
+.sub-menu_list li a{
+  color: #323232;
+  text-decoration: none;
+}
+.sub-menu_list li a:hover{
+  color: #ffbe19;
+  transition: all 0.3 ease;
+}
+ul.MainMenu_List span a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+ul.MainMenu_List span a:hover{
+    color: #ffbe19;
+    transition: all 0.4s ease;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/*Thiết Lập Cho Thành Phần Nội Dung Giới Thiệu*/
+footer .container .noi-dung{
+  margin-right: 30px;
+}
+footer  .container .noi-dung.about{
+  width:40%;
+}
+footer .container .noi-dung.about h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer .container .noi-dung.about h2:before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+footer .container .noi-dung.about p{
+  color: #999;
+}
+/*Thiết Lập Cho Thành Phần Icon Mạng Xã Hội*/
+.social-icon{
+  margin-top: 20px;
+  display: flex;
+}
+.social-icon li {
+  list-style: none;
+}
+.social-icon li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.social-icon li a:hover{
+  background: #f00;
+}
+.social-icon li a .fa{
+  color: #fff;
+  font-size: 20px;
+}
+.links h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.links h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.links h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+.links{
+ position: relative;
+ width: 25%;
+}
+.links ul li{
+  list-style: none;
+}
+.links ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.links ul li a:hover{
+  color: #fff;
+}
+.contact h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.contact h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+.contact{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+.contact .info{
+  position: relative;
+}
+.contact .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contact .info li span{
+  color: #999;
+}
+.contact .info li a{
+  color: #999;
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin-top:16px;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  padding: 8px 24px;
+}
+.btn--primary:hover {
+  background: #f00;
+}
+.btn--primary:active {
+  background: #f00;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+.form__field {
+  width: 90%;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+  border: 0;
+  outline: 0;
+  padding: 8px 4px;
+}
+
+@media  (max-width: 768px){
+  footer{
+      padding: 40px;
+           }
+  footer .container{
+      flex-direction: column;
+  }
+  footer .container .noi-dung{
+      margin-right: 0;
+      margin-bottom: 40px;
+  }
+  footer .container, .noi-dung.about, .links, .contact{
+      width: 100%;
+  }
+}
+
+
+/* Danh muc san pham */
+.DanhmucSanPham{
+    padding-left: 49px;
+    line-height: 2;
+    border-right: 1px solid #eaeaea ;
+}
+
+/* lọc kêt quả */
+.hienthi{
+  border: 1px solid #eaeaea;
+  text-align: right;
+  padding-right: 40px;
+}
+
+/* back to top */
+#backtop {
+  background: #000;
+  color: #eaeaea;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer;
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* thanh menu cố định */
+/* .inner-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 1px solid #f5f5f5;
+    padding: 10px 0px;
+} */
+
+
+
+
+/* cart */
+/* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    
+  }
+  
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 42rem;
+  }
+  
+  .carousel-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 42rem;
+  }
+  
+  
+  /* MARKETING CONTENT
+    -------------------------------------------------- */
+  
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .marketing h2 {
+    font-weight: 400;
+  }
+  
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  
+  /* Featurettes
+    ------------------------- */
+  
+  .featurette-divider {
+    margin: 5rem 0;
+    /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+  
+  
+  /* RESPONSIVE CSS
+    -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+  
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+  .hinhdaidien {
+    width: 150px;
+    height: 150px;
+}
+
+.content_left{
+  text-align: center;
+}
